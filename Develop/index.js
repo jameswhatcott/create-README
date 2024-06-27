@@ -17,28 +17,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 
-function generateREADME ({title, description, installation, usage, license, test, contribution}) {
-    `#${title}
 
-    ##Description
-    ${description}
 
-    ##Installation
-    ${installation}
-
-    ##Usage
-    ${usage}
-
-    ##License
-    ${license}
-
-    ##Test Instructions
-    ${test}
-
-    ##Contribution Guidelines
-    ${contribution}
-    `
-}
 
 
 // TODO: Create a function to initialize app
@@ -90,6 +70,29 @@ function init() {
   )});
 
 }
+
+
+const generateREADME = ({title, description, installation, usage, license, test, contribution}) =>
+    `#${title}
+
+    ##Description
+    ${description}
+
+    ##Installation
+    ${installation}
+
+    ##Usage
+    ${usage}
+
+    ##License
+    ${license}
+
+    ##Test Instructions
+    ${test}
+
+    ##Contribution Guidelines
+    ${contribution}
+    `
 
 // Function call to initialize app
 init();
