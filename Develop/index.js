@@ -9,11 +9,42 @@ const questions = [
     "Installation Instructions:",
     "Usage:",
     "License:",
+    "Test Instructions:",
     "Contribution Guidelines:",
-    "Test Instructions:"
      ];
 
-inquirer
+
+
+// TODO: Create a function to write README file
+
+function generateREADME ({title, description, installation, usage, license, test, contribution}) {
+    `#${title}
+
+    ##Description
+    ${description}
+
+    ##Installation
+    ${installation}
+
+    ##Usage
+    ${usage}
+
+    ##License
+    ${license}
+
+    ##Test Instructions
+    ${test}
+
+    ##Contribution Guidelines
+    ${contribution}
+    `
+}
+
+
+// TODO: Create a function to initialize app
+function init() {
+  
+  inquirer
   .prompt([
     {
       type: "input",
@@ -40,6 +71,16 @@ inquirer
         message: `${questions[4]}`,
         name: "license"
     },
+    {
+      type: "input",
+      message: `${questions[5]}`,
+      name: "test"
+    },
+    {
+      type: "input",
+      message: `${questions[6]}`,
+      name: "contribution"
+    },
   ])
   .then((response) => {
     console.log(response);
@@ -48,24 +89,7 @@ inquirer
     
   )});
 
-// TODO: Create a function to write README file
-
-function generateREADME ({title, description, installation, usage, license}) {
-    `#${questions[0]}
-
-    ##Description
-    ${questions[1]}
-
-    ##Installation
-    ${questions[2]}
-  
-
-    `
 }
-
-
-// TODO: Create a function to initialize app
-function init() {}
 
 // Function call to initialize app
 init();
