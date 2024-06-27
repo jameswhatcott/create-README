@@ -47,9 +47,10 @@ function init() {
         name: "usage"
     },
     {
-        type: "input",
+        type: "list",
         message: `${questions[4]}`,
-        name: "license"
+        name: "license",
+        choices: ['MIT License', 'Apache License 2.0', 'BSD 2-Clause', 'BSD 3-Clause']
     },
     {
       type: "input",
@@ -71,28 +72,52 @@ function init() {
 
 }
 
+function getLicenseBadge(license) {
+  switch (license) {
+    case 'MIT License':
+      return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+    case 'Apache License 2.0':
+      return '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)';
+    case 'BSD 2-Clause':
+      return '![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)';
+    case 'BSD 3-Clause':
+      return '![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)';
+    default:
+      return '';
+  }
+}
 
-const generateREADME = ({title, description, installation, usage, license, test, contribution}) =>
-    `#${title}
 
-    ##Description
-    ${description}
 
-    ##Installation
-    ${installation}
+function generateREADME(response) {
+  const licenseBadge = getLicenseBadge(response.license);
+  
+   return `
+# ${response.title}
 
-    ##Usage
-    ${usage}
+${licenseBadge}
 
-    ##License
-    ${license}
+## Description
+${response.description}
 
-    ##Test Instructions
-    ${test}
+## Installation
+${response.installation}
 
-    ##Contribution Guidelines
-    ${contribution}
-    `
+## Usage
+${response.usage}
+
+## License
+This project is licensed under the ${response.license}.
+
+## Test Instructions
+${response.test}
+
+## Contribution Guidelines
+${response.contribution}
+
+## Questions
+  `;
+}
 
 // Function call to initialize app
 init();
