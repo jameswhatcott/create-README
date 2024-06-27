@@ -38,7 +38,7 @@ inquirer
     {
         type: "input",
         message: `${questions[4]}`,
-        name: "License"
+        name: "license"
     },
   ])
   .then((response) => {
@@ -50,10 +50,16 @@ inquirer
 
 // TODO: Create a function to write README file
 
-function generateREADME (questions) {
-    `#`${questions[0]}`
+function generateREADME ({title, description, installation, usage, license}) {
+    `#${questions[0]}
+
     ##Description
-    `{questions[1]}`
+    ${questions[1]}
+
+    ##Installation
+    ${questions[2]}
+  
+
     `
 }
 
