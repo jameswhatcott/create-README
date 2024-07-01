@@ -100,6 +100,15 @@ ${licenseBadge}
 ## Description
 ${response.description}
 
+# Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Test Instructions](#test-instructions)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Questions](#questions)
+
+
 ## Installation
 ${response.installation}
 
