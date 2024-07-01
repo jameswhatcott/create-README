@@ -11,6 +11,8 @@ const questions = [
     "License:",
     "Test Instructions:",
     "Contribution Guidelines:",
+    "What's your GitHub Username?",
+    "What's your email?"
      ];
 
 
@@ -61,6 +63,16 @@ function init() {
       type: "input",
       message: `${questions[6]}`,
       name: "contribution"
+    },
+    {
+      type: "input",
+      message: `${questions[7]}`,
+      name: "username"
+    },
+    {
+      type: "input",
+      message: `${questions[8]}`,
+      name: "email"
     },
   ])
   .then((response) => {
@@ -125,6 +137,9 @@ ${response.test}
 ${response.contribution}
 
 ## Questions
+Reach out to me at ${response.email}
+OR
+[My GitHub](https://github.com/${response.username})
   `;
 }
 
