@@ -20,6 +20,12 @@ Ensure that node.js is installed on your device as well as npm inquirer
 
 ## Usage
 
+<img width="1011" alt="Screenshot 2024-07-02 at 9 10 38 AM" src="https://github.com/jameswhatcott/create-README/assets/162528300/8e917974-8ed3-4c43-8dff-d64d737a2165">
+
+
+<img width="738" alt="Screenshot 2024-07-02 at 9 11 08 AM" src="https://github.com/jameswhatcott/create-README/assets/162528300/07d42784-b58c-4474-8c02-1a7098b38d01">
+
+
 
 ## License
 This project is licensed under the MIT License.
